@@ -31,7 +31,7 @@ def quick_sort(array, start, end):
 quick_sort(array, 0, len(array) - 1)
 print(array)  
 
-파이썬의 장점을 살린 퀵 정렬 코드 
+# 파이썬의 장점을 살린 퀵 정렬 코드 
 
 array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
 
