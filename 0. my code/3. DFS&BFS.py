@@ -17,3 +17,37 @@ print(stack)
 2. 큐
 먼저 들어온 데이터가 먼저 나가는 형식(선입선출)의 자료구조이다.
 입구와 출구가 모두 뚫려있는 터널과 같은 형태로 시각화.
+
+from collections import deque
+
+queue = deque() # 큐 구현을 위해 deque 라이브러리 사용
+queue.append(5) #삽입
+queue.append(2)
+queue.append(3)
+queue.append(7)
+queue.popleft() #왼쪽에 위치한 것 삭제 5 삭제
+queue.append(1)
+queue.append(4)
+queue.popleft() # 2 삭제
+
+print(queue) # 먼저 들어온 순서대로 출력하기 
+queue.reverse() # 역순으로 바꾸기 
+print(queue) #나중에 들어온 원소부터 출력
+
+3. 재귀함수
+자기자신을 다시 호출화는 함수 
+
+# 무한히 반복되는 재귀함수: 무한루프를 이용할 것이 아니라면 종료조건을 보통 넣어준다. 
+def recursive_function():
+  print('재귀함수를 호출합니다.')
+  recursive_function()
+  
+# 종료조건이 있는 재귀함수 
+def recursive_function(i):
+  if i==100 :
+    return # 100번째 호출을 했을 때 종료하도록 조건 명시 
+  print(i, '번째 재귀함수에서', i+1, '번째 재귀함수까지를 호출합니다.')
+  recursive_function(i+1)
+  print(i,'번째 재귀함수에서 종료합니다.')
+  
+recursive_function(1)
