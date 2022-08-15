@@ -34,7 +34,7 @@ print(queue) # 먼저 들어온 순서대로 출력하기
 queue.reverse() # 역순으로 바꾸기 
 print(queue) #나중에 들어온 원소부터 출력
 
-<b>3. 재귀함수
+3. 재귀함수
 자기자신을 다시 호출화는 함수 
 
 # 무한히 반복되는 재귀함수: 무한루프를 이용할 것이 아니라면 종료조건을 보통 넣어준다. 
@@ -57,12 +57,21 @@ def factorial_iterative(n):
   for i in range(1, n+1):
     result *= i
   return result
-
 print('반복적으로 구현:', factorial_iterative(5))
+
 # 팩토리얼-재귀적으로 구현: n이 1 이하인 경우 1을 반환, n! = n * (n-1)!
 def factorial_recursive(n):
   if n <= 1:
     return 1
   return n * factorial_recursive(n-1)
-
 print('재귀적으로 구현:', factorial_recursive(5))
+
+# 최대공약수 계산 (유클리드 호제법)
+유클리드 호제법: 두 자연수 A,B에 대하여 (A>B) A를 B로 나눈 나머지를 R이라고 하면, A와 B의 최대공약수는 B와 R의 최대공약수와 같다.
+/: 나누기 //: 나눗셈의 몫, % 나눗셈의 나머지, divmod(): 나눗셈의 몫과 나머지(튜플형식)
+def gcd(a,b):
+  if a%b == 0:
+    return b
+  else: 
+    return gcd(b, a%b)
+print(gcd(192,162))
