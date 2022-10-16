@@ -1,4 +1,4 @@
-문제1. 1로 만들기 (백준1463)
+##문제1. 1로 만들기 (백준1463)
 x = int(input())
 
 d = [0]*1000001
@@ -10,7 +10,7 @@ for i in range(2, x+1):
         d[i]=min(d[i],d[i//2]+1)
 print(d[x])
 
-문제2. 개미전사
+##문제2. 개미전사
 N = int(input())
 k = list(map(int, input().split()))
 
@@ -23,7 +23,7 @@ for i in range(2,N):
 
 print(d[n-1])
 
-문제3. 바닥공사(백준11727)
+##문제3. 바닥공사(백준11727)
 n = int(input())
 d=[0]*1001
 d[1]=1
@@ -33,7 +33,7 @@ for i in range(3,n+1):
     d[i]=(d[i-1]+2*d[i-2])%10007
 print(d[n])
 
-문제4. 효율적인 화폐구성
+##문제4. 효율적인 화폐구성
 n,m = map(int, input().split())
 array=[]
 for i in range(n):
