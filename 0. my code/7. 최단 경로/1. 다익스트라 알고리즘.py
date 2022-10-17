@@ -49,7 +49,7 @@ def heapsort(iterable):
   return result
 result = heapsort([1,3,5,7,9,2,4,6,8,0])
 print(result)
-
+-------------------------------------------------------------------
 ## 우선순위 큐을 활용한 다익스트라 알고리즘(백준 1753 최단경로)
 import heapq
 import sys
