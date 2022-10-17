@@ -22,8 +22,8 @@
 - 시간 복잡도가 좋다
 
 import heapq
-
-def heapsort(iterable): # 오름차순 힙 정렬
+# 오름차순 힙 정렬
+def heapsort(iterable): 
   h = []
   result = []
   # 모든 원소 차례대로 힙에 삽입
@@ -33,10 +33,22 @@ def heapsort(iterable): # 오름차순 힙 정렬
   for i in range(len(h)):
     result.append(heapq.heappop(h))
   return result
-
 result = heapsort([1,3,5,7,9,2,4,6,8,0])
 print(result)
 
+# 내림차순 힙 정렬
+def heapsort(iterable): 
+  h = []
+  result = []
+  # 모든 원소 차례대로 힙에 삽입
+  for value in iterable:
+    heapq.heappush(h, -value)
+  # 힙에 삽입된 모든 원소를 차례대로 꺼내서 result에 담기
+  for i in range(len(h)):
+    result.append(-heapq.heappop(h))
+  return result
+result = heapsort([1,3,5,7,9,2,4,6,8,0])
+print(result)
 
 ## 우선순위 큐을 활용한 다익스트라 알고리즘(백준 1753 최단경로)
 import heapq
