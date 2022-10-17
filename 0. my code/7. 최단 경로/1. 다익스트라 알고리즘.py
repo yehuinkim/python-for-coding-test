@@ -10,6 +10,32 @@
 - 해당노드를 거쳐 다른 노드로 가는 비용계산하여 최단 거리 테이블 갱신
 - 위의 두 단계를 반복
 
+3. 우선순위 큐
+- 우선순위가 가장 높은 데이터를 가장 먼저 삭제하는 자료구조
+|스택(stack) -> 가장 나중에 삽입된 데이터 추출
+|큐(queue) -> 가장 먼저 삽입된 데이터 추출
+|우선순위 큐(priority queue) -> 가장 우선순위가 높은 데이터 추출
+
+4. 힙(Heap)
+- 우선순위 큐를 구현하기 위해 사용하는 자료구조 중 하나 
+- 최소 힙과 최대 힙
+- 시간 복잡도가 좋다
+
+import heapq
+
+def heapsort(iterable):
+  h = []
+  result = []
+  for value in iterable:
+    heapq.heappush(h, value)
+  for i in range(len(h)):
+    result.append(heapq.heappop(h))
+  return result
+
+result = heapsort([1,3,5,7,9,2,4,6,8,0])
+print(result)
+
+
 ## 우선순위 큐을 활용한 다익스트라 알고리즘(백준 1753 최단경로)
 import heapq
 import sys
